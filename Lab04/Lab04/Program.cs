@@ -4,28 +4,35 @@ public class switchLearning
 {
     public static void Main()
     {
-        Console.Write("Input your grade (A, B, C, D or F) : ");
-        string gradeString = Console.ReadLine();
+        Console.Write("Input Day Name (sun, mon, tue, wed, thu, fri and sat) : ");
+        string day = Console.ReadLine();
         string message;
-        switch (gradeString.ToUpper())
+        switch (day)
+
         {
-            case "A":
-                message = "Excellent";
+            case "sun":
+                message = "Sun is Sunday, color Red";
                 break;
-            case "B":
-                message = "Good";
+            case "mon":
+                message = "Mon is Monday, color Yellow";
                 break;
-            case "C":
-                message = "Cool";
+            case "tue":
+                message = "Tue is Tuesday, color Pink";
                 break;
-            case "D":
-                message = "Try";
+            case "wed":
+                message = "Wed is Wednesday, color Green";
                 break;
-            case "F":
-                message = "Get out!!";
+            case "thu":
+                message = "Thu is Thursday, color Orange";
+                break;
+            case "fri":
+                message = "Fri is Friday, color Blue";
+                break;
+            case "sat":
+                message = "Sat is Saturday, color Purple";
                 break;
             default:
-                message = "Incorrect grade";
+                message = "Incorrect Day Name";
                 break;
         }
         Console.WriteLine(message);
