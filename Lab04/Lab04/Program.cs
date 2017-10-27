@@ -3,16 +3,14 @@ public class TryCatch
 {
     static void Main(string[] args)
     {
-        int a = 0;
-        int b = 10;
-
+        int value = 800000000;
         try
         {
-            b /= a;
-            Console.WriteLine(b /= a);
+            int square = value * value;
+            Console.WriteLine("{0} ^ 2 = {1}", value, square);
 
         }
-        catch(DivideByZeroException e)
+        catch (OverflowException e)
         {
             Console.WriteLine(e.Message);
         }
