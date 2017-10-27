@@ -3,14 +3,16 @@ public class TryCatch
 {
     static void Main(string[] args)
     {
-        int a = int.MaxValue;
+        int a = 0;
+        int b = 10;
+
         try
         {
-            a *= 2;
-            Console.WriteLine(a);
+            b /= a;
+            Console.WriteLine(b /= a);
 
         }
-        catch(NotSupportedException e)
+        catch(DivideByZeroException e)
         {
             Console.WriteLine(e.Message);
         }
